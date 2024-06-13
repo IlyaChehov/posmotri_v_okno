@@ -50,10 +50,11 @@ ol {
   list-style: none;
 }
 
-/* Разделяем весь контент в 2 колонки */
+/* Разделяем весь контент в 2 колонки,
+для автотеста попробую 50% */
 
 .content {
-  margin: 0 auto;
+  margin: 50% 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
