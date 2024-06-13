@@ -53,7 +53,7 @@ ol {
 /* Разделяем весь контент в 2 колонки */
 
 .content {
-  margin: auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
