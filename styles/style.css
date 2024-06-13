@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Скрытый элемент, можно копировать 
@@ -50,11 +53,10 @@ ol {
   list-style: none;
 }
 
-/* Разделяем весь контент в 2 колонки,
-для автотеста попробую 50% */
+/* Разделяем весь контент в 2 колонки,*/
 
 .content {
-  margin: 50% 30px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
