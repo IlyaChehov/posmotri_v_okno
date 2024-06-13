@@ -9,16 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 /* Скрытый элемент, можно копировать 
@@ -26,10 +26,10 @@ html {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -56,12 +56,12 @@ ol {
 /* Разделяем весь контент в 2 колонки,*/
 
 .content {
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   align-items: end;
   gap: 25px;
+  margin: 0 30px;
 }
 
 /* Задем размеры контейнера с видео и нижний отступ */
@@ -100,9 +100,9 @@ ol {
 /* Заголовок форм */
 
 .search-form__fieldset-title {
+  margin-bottom: 5px;
   font-weight: 400;
   font-size: 18px;
-  margin-bottom: 5px;
 }
 
 .search-form__label {
@@ -133,6 +133,10 @@ ol {
 /* Cтили поля для ввода текста */
 
 .search-form__textfield {
+  border-top: 1px solid #FFF;
+  border-right: none;
+  border-bottom: 1px solid #FFF;
+  border-left: none;
   padding: 2px 0;
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
@@ -140,10 +144,6 @@ ol {
   font-size: inherit;
   background-color: transparent;
   inline-size: 225px;
-  border-top: 1px solid #FFF;
-  border-right: none;
-  border-bottom: 1px solid #FFF;
-  border-left: none;
   appearance: none;
 }
 
@@ -163,11 +163,11 @@ ol {
 
 .search-form__pseudo-checkbox {
   display: block;
+  align-self: center;
   width: 19px;
   height: 19px;
-  border: 1px solid #fff;
   margin-right: 5px;
-  align-self: center;
+  border: 1px solid #fff;
 }
 /* Состояние при наведении */
 .search-form__label-text:hover {
@@ -181,13 +181,15 @@ ol {
   display: block;
   width: 15px;
   height: 15px;
-  background-color: #fff;
   margin: 1px 0 0 1px;
+  background-color: #fff;
 }
 
 /* Стили кнопок */
 
 .button {
+  align-self: end;
+  width: 100%;
   border: 1px solid #FFF;
   padding: 6px 0;
   color: #FFF;
@@ -196,14 +198,12 @@ ol {
   font-size: 18px;
   text-align: center;
   background-color: transparent;
-  width: 100%;
-  align-self: end;
   cursor: pointer;
 }
 
 .button:active {
-  background-color: #545050;
   text-decoration: none;
+  background-color: #545050;
 }
 
 .button:hover {
@@ -232,12 +232,12 @@ ol {
 /* Стили текста главного заголовка */
 
 .title {
+  padding-left: 4px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  padding-left: 4px;
 }
 
 /* Спан главного заголовка */
@@ -250,11 +250,11 @@ ol {
 
 .content__list {
   position: relative;
-  overflow-y: scroll;
   height: 298px;
-  padding-left: 7px;
   padding-top: 2px;
   padding-right: 1px;
+  padding-left: 7px;
+  overflow-y: scroll;
 }
 
 /* Задаем отступы между элементами карточек. 
@@ -283,8 +283,8 @@ ol {
 /* Убираем подчеркивание ссылок */
 
 .content__card-link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 /* Распологаеи элементы внутри контейнера в линию */
